@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {Button, Text, View} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { StyleSheet, Button, Text, View, Image, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import logo from './assets/logo.png';
 import DetailsScreen from './DetailsScreen';
-import FrogsScreen from './FrogsScreen';
 
 function HomeScreen({ navigation }) {
   return (
