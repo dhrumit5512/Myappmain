@@ -8,25 +8,40 @@ import DetailsScreen from './DetailsScreen';
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
+    <SafeAreaView>
+      <ScrollView>hi
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
+function BlogScreen({ navigation }) {
+  return (
+    <SafeAreaView>
+      <ScrollView>
+        hi
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+function SavedScreen({ navigation }) {
+  return (
+    <SafeAreaView>
+      <ScrollView>hi
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+
 function SettingsScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -34,11 +49,66 @@ const HomeStack = createNativeStackNavigator();
 
 function HomeStackScreen() {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={HomeScreen} />
+    <HomeStack.Navigator
+      mode="modal"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'orange',
+        },
+        headerTintColor: '#fff',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
+      <HomeStack.Screen name="HOME" component={HomeScreen} />
       <HomeStack.Screen name="Details" component={DetailsScreen} />
-      <HomeStack.Screen name="Frogs" component={FrogsScreen} />
     </HomeStack.Navigator>
+  );
+}
+
+const BlogStack = createNativeStackNavigator();
+
+function BlogStackScreen() {
+  return (
+    <BlogStack.Navigator
+      mode="modal"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'orange',
+        },
+        headerTintColor: '#fff',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
+      <BlogStack.Screen name="Recent Blog's" component={BlogScreen} />
+    </BlogStack.Navigator>
+  );
+}
+
+const SavedStack = createNativeStackNavigator();
+
+function SavedStackScreen() {
+  return (
+    <SavedStack.Navigator
+      mode="modal"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'orange',
+        },
+        headerTintColor: '#10591d',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
+      <SavedStack.Screen name="Saved Recipes" component={SavedScreen} />
+    </SavedStack.Navigator>
   );
 }
 
@@ -46,10 +116,20 @@ const SettingsStack = createNativeStackNavigator();
 
 function SettingsStackScreen() {
   return (
-    <SettingsStack.Navigator>
-      <SettingsStack.Screen name="Settings" component={SettingsScreen} />
-      <SettingsStack.Screen name="Details" component={DetailsScreen} />
-      <HomeStack.Screen name="Frogs" component={FrogsScreen} />
+    <SettingsStack.Navigator
+      mode="modal"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'orange',
+        },
+        headerTintColor: '#10591d',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
+      <SettingsStack.Screen name="Settings & Options" component={SettingsScreen} />
     </SettingsStack.Navigator>
   );
 }
@@ -61,6 +141,8 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator screenOptions={{ headerShown: false }}>
         <Tab.Screen name="Home" component={HomeStackScreen} />
+        <Tab.Screen name="Blog" component={BlogStackScreen} />
+        <Tab.Screen name="Saved" component={SavedStackScreen} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} />
       </Tab.Navigator>
     </NavigationContainer>
