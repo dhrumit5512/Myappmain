@@ -54,7 +54,7 @@ function HomeScreen({ navigation }) {
             />
           </View>
 
-                    <View style={styles.recipeBox}>
+          <View style={styles.recipeBox}>
             <Image source={{ uri: 'https://picsum.photos/200/300' }}
               style={{ height: 150, resizeMode: 'contain', margin: 10, borderRadius: 10 }} />
             <Text style={styles.homeTitle}>Chana Masala </Text>
@@ -106,34 +106,28 @@ function BlogScreen({ navigation }) {
     <SafeAreaView>
       <ScrollView>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Image source={logo} style={{ height: 120, resizeMode: 'contain', margin: 10 }} />
           <Text style={styles.header}>Search for Recipes</Text>
-
-          <View style={styles.news}>
+          <Image source={logo} style={{ height: 120, resizeMode: 'contain', margin: 10 }} />
+          <View style={styles.pera}>
             <Text style={styles.header}>Recipe News</Text>
+            <Text style={styles.homeSub}>Sate your Hunger</Text>
             <View>
-              <Text style={styles.newsBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae faucibus urna. Praesent id lobortis ante.
-                Integer auctor leo nisl. Vestibulum quis rutrum eros. Vivamus scelerisque sed sapien sed efficitur. Nam a tortor
-                et enim tincidunt hendrerit. Mauris sed semper est, in finibus felis. Vestibulum vel interdum ex, ut convallis
-                lacus. Duis finibus ligula odio, in pulvinar nisi mollis blandit. Aenean sagittis a ex at mattis.</Text>
-
-              <Text style={styles.newsBody}>Vestibulum bibendum purus efficitur, finibus purus a, ultrices lorem. Aenean consectetur scelerisque enim nec
-                convallis. Aenean magna purus, pharetra sed ornare sed, rhoncus vitae quam. Ut efficitur est eu nisl euismod
-                dictum. Nunc interdum lacus vel faucibus viverra. Phasellus in gravida velit, fermentum egestas nulla. Aliquam
-                sem libero, pulvinar eget leo sit amet, rhoncus consequat velit. Curabitur pharetra mi orci, at interdum nulla
-                scelerisque laoreet. Fusce non tincidunt diam.</Text>
-
-              <Text style={styles.newsBody}>Phasellus bibendum sagittis accumsan. Mauris mollis augue ut mauris eleifend, in consectetur sapien interdum.
-                Fusce tincidunt maximus sodales. Curabitur suscipit diam a justo tincidunt dapibus. Morbi a cursus risus. Nulla
-                et magna tortor. Sed mi ipsum, pretium vel nulla eget, volutpat placerat erat.</Text>
+              <Text style={styles.peraBody}>How did we ever manage to cook before the arrival of the internet? I suppose we had to rely on cookbooks, cooking tv shows, and knowledge handed down from our grandmothers. Of course, the more daring would experiment in the kitchen, remembering the successes, and mercifully forgetting any culinary disasters.</Text>
+              <Text style={styles.peraBody}>Nowadays we have a multitude of food blogs offering mouth-watering recipes, suggestions, and vivid photography, sending us straight to the kitchen … or the supermarket. There are hundreds of food blogs to tempt your taste buds.</Text>
+              <Text style={styles.peraBody}>Love and Lemons has been created by Jeanine Donofrio and her husband, Jack Mathews (“#1 taste-tester”). The blog’s name comes from the fact that Jeanine loves seasonal food, often finished off with a squeeze of lemon.f you are looking for a recipe, you can filter your search by season, holiday, special diet, meal type, or ingredient. Surprisingly there are only six recipes under the ingredient, lemon.</Text>
+            </View>
+                <Text style={styles.homeSub}>Chicken in an Orange Sauce</Text> 
+            <View>
+              <Text style={styles.peraBody}>Cookie and Kate is all about celebrating good food. Kate is Kathryne Taylor. Cookie is her dog – which Kate describes as a “mystery mutt,” or as a DNA test found, half schipperke and half dachshund/Australian koolie mix. Kate is a photographer and cook from Oklahoma. She created the blog in 2010 and now works on it full-time. Like many of the other top food blogs featured here, Cookie and Kate features vegetarian and whole food recipes.</Text>
+              <Text style={styles.peraBody}>Smitten Kitchen summarizes itself as being “Fearless cooking from a tiny kitchen in New York City.” It was created by Deb Perelman who obsessed with the intricacies of food and cooking. As she says on her About page, she loves being able to wake and cook whatever she feels like that day.</Text>
+              <Text style={styles.peraBody}>The site makes it easy to search for recipes. You can look for recipes by Course, Cuisine, Diet, Everyday, Ingredient, or Season.</Text>
             </View>
           </View>
-
         </View>
       </ScrollView>
     </SafeAreaView>
   );
-}
+} 
 
 function SavedScreen({ navigation }) {
   return (
@@ -142,25 +136,25 @@ function SavedScreen({ navigation }) {
         <View>
           <View style={styles.container}>
             <Image style={styles.image} source={{ uri: 'https://picsum.photos/200/300' }} />
-            <Text style={styles.text}>Here is some text.</Text>
+            <Text style={styles.text}>Here is your SAVED Blog.</Text>
           </View>
         </View>
         <View>
           <View style={styles.container}>
             <Image style={styles.image} source={{ uri: 'https://picsum.photos/200/300' }} />
-            <Text style={styles.text}>Here is some text.</Text>
+            <Text style={styles.text}>Here is your SAVED Blog.</Text>
           </View>
         </View>
         <View>
           <View style={styles.container}>
             <Image style={styles.image} source={{ uri: 'https://picsum.photos/200/300' }} />
-            <Text style={styles.text}>Here is some text.</Text>
+            <Text style={styles.text}>Here is your SAVED Blog.</Text>
           </View>
         </View>
         <View>
           <View style={styles.container}>
             <Image style={styles.image} source={{ uri: 'https://picsum.photos/200/300' }} />
-            <Text style={styles.text}>Here is some text.</Text>
+            <Text style={styles.text}>Here is your SAVED Blog.</Text>
           </View>
         </View>
 
@@ -181,17 +175,14 @@ function SavedScreen({ navigation }) {
 //   );
 // }
 
-
 function SettingsScreen({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
-        <View style={styles.innercontent}>
-          <View style={[styles.border, { marginTop: 25 }]}>
-            <Text style={[styles.subtitle, styles.textfill]}>FOOD</Text>
-            <Text style={styles.para1}>best of created by</Text>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
           </View>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -252,7 +243,7 @@ function SavedStackScreen() {
         headerStyle: {
           backgroundColor: 'orange',
         },
-        headerTintColor: '#10591d',
+        headerTintColor: '#fff',
         headerTitleAlign: 'center',
         headerTitleStyle: {
           fontWeight: 'bold',
@@ -285,7 +276,7 @@ function SettingsStackScreen() {
         headerStyle: {
           backgroundColor: 'orange',
         },
-        headerTintColor: '#10591d',
+        headerTintColor: '#fff',
         headerTitleAlign: 'center',
         headerTitleStyle: {
           fontWeight: 'bold',
@@ -311,12 +302,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-  news: {
+  pera: {
     margin: 20,
+    padding: 15,
   },
-  newsBody: {
-    fontSize: 15,
+  peraBody: {
+    fontSize: 14,
     marginBottom: 10,
+    color: 'gray',
   },
   homeTitle: {
     fontSize: 22,
@@ -348,7 +341,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   text: {
-    fontSize: 16,
+    fontSize: 13,
   },
   title: {
     color: '#fff',
@@ -361,7 +354,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center'
   },
-  para1: {
+  para2: {
     color: 'black',
     fontSize: 15,
     textAlign: 'center',
@@ -374,16 +367,13 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderRadius: 4,
   },
-  innercontent: {
-    width: "100%",
-  },
-  textfill: {
+  tex: {
     padding: 4,
     backgroundColor: "#fff",
     color: "#684BB7",
     borderRadius: 4,
   }
-})
+});
 
 const Tab = createBottomTabNavigator();
 
