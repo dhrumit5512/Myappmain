@@ -183,6 +183,38 @@ function SettingsScreen({ navigation }) {
             <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
             <Text style={styles.para2}>best of created by</Text>
           </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
+          <View style={[styles.border, { marginTop: 20 }]}>
+            <Text style={[styles.subtitle, styles.tex]}>FOOD NAME</Text>
+            <Text style={styles.para2}>best of created by</Text>
+          </View>
       </ScrollView>
     </SafeAreaView>
   );
