@@ -139,6 +139,12 @@ function SavedScreen({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
+        <View>
+          <View style={styles.container}>
+            <Image style={styles.image} source={{ uri: 'https://picsum.photos/200/300' }} />
+            <Text style={styles.text}>Here is some text.</Text>
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
