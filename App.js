@@ -186,6 +186,12 @@ function SettingsScreen({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
+        <View style={styles.innercontent}>
+          <View style={[styles.border, { marginTop: 25 }]}>
+            <Text style={[styles.subtitle, styles.textfill]}>FOOD</Text>
+            <Text style={styles.para1}>best of created by</Text>
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
