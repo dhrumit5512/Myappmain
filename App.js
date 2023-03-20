@@ -195,6 +195,17 @@ function SavedStackScreen() {
   );
 }
 
+// const SettingsStack = createNativeStackNavigator();
+
+// function SettingsStackScreen() {
+//   return (
+//     <SettingsStack.Navigator>
+//       <SettingsStack.Screen name="Settings" component={SettingsScreen} />
+//       <SettingsStack.Screen name="Details" component={DetailsScreen} />
+//     </SettingsStack.Navigator>
+//   );
+// }
+
 const SettingsStack = createNativeStackNavigator();
 
 function SettingsStackScreen() {
@@ -257,6 +268,52 @@ const styles = StyleSheet.create({
   homeRating: {
     fontSize: 16,
   },
+  container: {
+    margin: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  image: {
+    width: 200,
+    height: 150,
+    marginRight: 10,
+  },
+  text: {
+    fontSize: 16,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  subtitle: {
+    color: '#fff',
+    fontSize: 19,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  para1: {
+    color: 'black',
+    fontSize: 15,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  border: {
+    padding: 5,
+    margin: 10,
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 4,
+  },
+  innercontent: {
+    width: "100%",
+  },
+  textfill: {
+    padding: 4,
+    backgroundColor: "#fff",
+    color: "#684BB7",
+    borderRadius: 4,
+  }
 })
 
 const Tab = createBottomTabNavigator();
