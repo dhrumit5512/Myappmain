@@ -106,6 +106,7 @@ function BlogScreen({ navigation }) {
     <SafeAreaView>
       <ScrollView>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Image source={logo} style={{ height: 120, resizeMode: 'contain', margin: 10 }} />
           <Text style={styles.header}>Search for Recipes</Text>
 
           <View style={styles.news}>
